@@ -1,0 +1,27 @@
+version: 2
+
+updates:
+  # Python packages in uv.lock (the launcher has none of its own, so these are the dev tools)
+  - package-ecosystem: "uv"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10 # Maximum number of open pull requests
+    groups:
+      runtime-deps:
+        dependency-type: "production"
+      dev-deps:
+        dependency-type: "development"
+    commit-message:
+      prefix: "deps" # Prefix for the commit message
+
+  # The actions used in .github/workflows/, which are pinned to exact versions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      github-actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: "ci" # Prefix for the commit message

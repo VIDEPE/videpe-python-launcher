@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: 'If you use this launcher in your work, please cite it using the metadata below. If you use VIDEPE itself, please also cite VIDEPE (see references).'
+type: software
+title: 'videpe-python-launcher: a reference Python host app for VIDEPE'
+abstract: 'A minimal, standard-library-only Python example that shows how to launch VIDEPE (Visualization & Integration of Data for Epilepsy Presurgical Evaluation) in host-app mode as a neural data file viewer from your own Python app.'
+authors:
+  - given-names: Jeroen
+    family-names: Buil
+    affiliation: 'University of Geneva (UNIGE)'
+    orcid: 'https://orcid.org/0009-0005-6448-0650'
+license: AGPL-3.0-only
+repository-code: 'https://github.com/VIDEPE/videpe-python-launcher'
+keywords:
+  - Electroencephalography (EEG)
+  - Epilepsy
+  - Host App
+  - Neuroimaging
+  - Open Source
+  - Python
+  - VIDEPE
+  - Web Application
+references:
+  - type: software
+    title: 'VIDEPE: Visualization & Integration of Data for Epilepsy Presurgical Evaluation'
+    doi: 10.5281/zenodo.23312820
+    authors:
+      - given-names: Jeroen
+        family-names: Buil
+        affiliation: 'University of Geneva (UNIGE)'
+        orcid: 'https://orcid.org/0009-0005-6448-0650'
+      - given-names: Serge
+        family-names: Vulliémoz
+        affiliation: 'EEG and Epilepsy Unit, Geneva University Hospitals (HUG)'
+        orcid: 'https://orcid.org/0000-0002-1877-8625'
+      - given-names: Isotta
+        family-names: Rigoni
+        affiliation: 'Department of Clinical Neuroscience, University of Geneva (UNIGE)'
+        orcid: 'https://orcid.org/0000-0002-5804-2137'
+      - given-names: Nicolas
+        family-names: Roehri
+        affiliation: 'Department of Clinical Neuroscience, University of Geneva (UNIGE)'
+        orcid: 'https://orcid.org/0000-0002-6948-1055'
+    license: AGPL-3.0-only
+    repository-code: 'https://github.com/VIDEPE/videpe'
+    url: 'https://videpe.github.io/videpe/'

@@ -1,0 +1,136 @@
+
+[project]
+name = "videpe_python_launcher"
+version = "0.1.0"
+description = "A minimal standard library only Python example that showcases how to launch VIDEPE as neural data file viewer from a python app."
+authors = [{ name = "Jeroen Buil", email = "jeroen.buil@unige.ch" }]
+readme = "README.md"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
+keywords = ["python"]
+requires-python = ">=3.13,<4"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Typing :: Typed",
+]
+dependencies = [
+]
+
+[dependency-groups]
+dev = [
+    "ty>=0.0.65",
+    "pytest>=9.1.1",
+    "pytest-timeout>=2.4.0",
+    "pytest-xdist>=3.8.0",
+    "pytest-randomly>=4.1.0",
+    "hypothesis>=6.164.0",
+    "coverage>=7.15.2",
+    "ruff>=0.16.1",
+    "pre-commit>=4.6.1",
+]
+
+[project.urls]
+homepage = "https://github.com/VIDEPE/videpe-python-launcher"
+repository = "https://github.com/VIDEPE/videpe-python-launcher.git"
+issues = "https://github.com/VIDEPE/videpe-python-launcher/issues"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+package = true
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
+target-version = "py313"
+exclude = [
+    ".git",
+    ".venv",
+    "venv",
+    "__pycache__",
+    ".pytest_cache",
+    ".ruff_cache",
+    "build",
+    "dist",
+    "*.egg-info",
+    "htmlcov",
+    ".cache",
+]
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+pydocstyle.convention = "google"
+fixable = ["ALL"]
+select = ["ALL"]
+ignore = [
+    "FA102",    # Flake8-future-annotations
+    "F401",     # Disable fix for unused imports
+    "B904",     # Allow raising exceptions without from e
+    "PLR0913",  # too many arguments
+    "CPY",      # Flake8-copyright
+    "T201",     # Debugging print statements
+    "ERA",      # Eradicate – detects commented-out code
+    "BLE001",   # Catch-all exceptions
+    "D100",     # missing docstring in public module
+    "D105",     # undocumented magic method
+    "D107",     # undocumented public init
+    "D203",     # incorrect-blank-line-before-class
+    "D205",     # line-between-summary-and-description
+    "D212",     # multi-line-summary-first-line
+    "D400",     # missing-trailing-period
+    "D407",     # missing-dashed-underline-after-section
+    "S311",     # rand-usage
+    "EM102",    # f-string-exception
+    "TRY003",   # long-exception-messages
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = [
+    "PLC0415",  # Import outside top-level (tests often need scoped imports)
+    "PLR2004",  # Magic values
+    "F841",     # Unused variable (fixtures, etc.)
+    "PT001",    # Use @pytest.fixture() over @pytest.fixture
+    "S101",     # Use of assert detected
+    "D101",     # Missing docstring in public class
+    "D103",     # Missing docstring in public function
+    "E741",     # Ambiguous variable name 'l', 'O', or 'I'
+]
+
+
+[tool.ty]
+terminal.output-format = "full"
+
+[tool.ty.environment]
+python = ".venv"
+
+[tool.ty.src]
+include = ["src/**/*.py"]
+
+[tool.coverage.report]
+skip_empty = true
+show_missing = true
+fail_under = 100
+exclude_also = [
+    "if __name__ == .__main__.:",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["src"]
+omit = ["_*.py", "__*.py"]
+
+[tool.pytest.ini_options]
+addopts = ["-ra", "--strict-markers", "--strict-config"]
+testpaths = ["tests"]
+pythonpath = ["src"]
+timeout = 60
