@@ -1,12 +1,12 @@
-# :rocket: videpe-python-launcher
+# videpe-python-launcher
 
-A minimal, standard-library-only Python example that shows how to launch [VIDEPE](https://github.com/VIDEPE/videpe) as a neural data file viewer from your own Python app.
+A minimal, standard-library-only Python example that shows how to launch [VIDEPE](https://videpe.github.io/videpe/) as a neural data file viewer from your own Python app.
 
 ## What is this for?
 
 This repo is a working reference for running VIDEPE in **host-app mode**: your own (python) application serving VIDEPE and handing it the files to open. This allows a data platform, analysis pipeline or desktop tool to use VIDEPE as its viewer. Users see their data straight away, without locating and dragging in files themselves, and everything stays on their own computer. It follows VIDEPE's [host app integration guide](https://github.com/VIDEPE/videpe/blob/main/docs/host-app-integration.md).
 
-[VIDEPE](https://github.com/VIDEPE/videpe) (*Visualization & Integration of Data for Epilepsy Presurgical Evaluation*) is a web-based viewer for EEG and neuroimaging data (EEG, electrode positions, MRI, PET, SPECT and meshes), developed at the Epilepsy and Brain Networks Lab at UNIGE. All processing happens in the browser and files are never uploaded. VIDEPE is for research use only; it is not a medical device.
+[VIDEPE](https://videpe.github.io/videpe/) (*Visualization & Integration of Data for Epilepsy Presurgical Evaluation*) is a web-based viewer for EEG and neuroimaging data (EEG, electrode positions, MRI, PET, SPECT and meshes), developed at the Epilepsy and Brain Networks Lab at UNIGE. All processing happens in the browser and files are never uploaded. VIDEPE is for research use only; it is not a medical device.
 
 - **VIDEPE on GitHub**: [github.com/VIDEPE/videpe](https://github.com/VIDEPE/videpe)
 - **Try VIDEPE online**: [videpe.github.io/videpe](https://videpe.github.io/videpe/)
@@ -189,6 +189,8 @@ Security updates are switched on separately, in the repository settings:
 
 ## References
 
+- [VIDEPE](https://github.com/VIDEPE/videpe) - Visualization & Integration of Data for Epilepsy Presurgical Evaluation, the viewer this launcher hosts. Try it online at [videpe.github.io/videpe](https://videpe.github.io/videpe/). If you use it in your work, please cite it: [doi:10.5281/zenodo.23312820](https://doi.org/10.5281/zenodo.23312820).
+- [VIDEPE host app integration guide](https://github.com/VIDEPE/videpe/blob/main/docs/host-app-integration.md) - The contract this launcher implements.
 - [Pattern](https://github.com/wyattferguson/pattern) - A modern cookiecutter template for your next Python project.
 
 ## License
