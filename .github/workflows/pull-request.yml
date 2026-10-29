@@ -21,7 +21,19 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          types: "feat, fix, docs, style, refactor, perf, test, build, ci, revert, deps"
+          # One type per line: the action reads a comma-separated list as a single type
+          types: |
+            feat
+            fix
+            docs
+            style
+            refactor
+            perf
+            test
+            build
+            ci
+            revert
+            deps
           requireScope: false
 
   test:
