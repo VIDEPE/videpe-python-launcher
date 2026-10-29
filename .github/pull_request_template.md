@@ -7,7 +7,7 @@
 
 **[REMOVE THIS SECTION BEFORE SUBMISSION]**
 
-## Description
+## Summary
 
 [Provide a detailed explanation of the changes you have made. Include the reasons behind these changes and any relevant context.]
 
